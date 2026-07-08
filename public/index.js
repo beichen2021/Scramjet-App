@@ -47,15 +47,7 @@ form.addEventListener("submit", async (event) => {
 
 	const url = search(address.value, searchEngine.value);
 
-	let wispUrl =
-		(location.protocol === "https:" ? "wss" : "ws") +
-		"://" +
-		location.host +
-		"/wisp/";
-	if ((await connection.getTransport()) !== "/libcurl/index.mjs") {
-		await connection.setTransport("/libcurl/index.mjs", [
-			{ websocket: wispUrl },
-		]);
+	let wispUrl = "wss://ws.opentech.dpdns.org/wisp/"; 
 	}
 	const frame = scramjet.createFrame();
 	frame.frame.id = "sj-frame";
