@@ -48,7 +48,7 @@ form.addEventListener("submit", async (event) => {
 	const url = search(address.value, searchEngine.value);
 
 	let wispUrl = "wss://ws.opentech.dpdns.org/wisp/"; 
-	}
+	
 	const frame = scramjet.createFrame();
 	frame.frame.id = "sj-frame";
 	document.body.appendChild(frame.frame);
